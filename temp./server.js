@@ -10,25 +10,32 @@ const app = express();
     app.set("view engine", "pug")
     app.set("views" , 'views');
     
-    var server = app.listen(5501, function(){
-        var host = server.address().address;
-        var port = server.address().port;
-        console.log('app listening at http://localhost:5501', host, port);
-    });
+app.listen(5502);
     
     
     app.get("/", (req, res, next) => {
-        let url = "localhost:5501"
-        res.render("index", {url:url});
+        let URL = "localhost:5502"
+        res.render("index", {url:URL});
         });
         
       
       app.get("/contact", (req, res, next) => {
-        let url = "localhost:5501"
+        let url = "localhost:5502"
         res.render("contact", {url:url});
         });
         
         app.get("/mars", (req, res, next) => {
-          let url = "localhost:5501"
+          let url = "localhost:5502"
           res.render("mars", {url:url});
         })
+
+
+
+
+        // Things for the API
+        // var marsIndex = require('./routes/index');
+        // var nasaApi = require('./routes/nasa');
+        // var marsData = 
+
+        // app.use('/nasa', nasaApi)
+        // app.use('/', marsIndex)

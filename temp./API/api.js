@@ -1,3 +1,4 @@
+import { Http2ServerRequest } from "http2";
 
 var mars = "mars";
 var condition = "weather";
@@ -90,7 +91,7 @@ const get_data = async url => {
 var reportStatus;
 getData(url);
 
-
+getApi(Http2ServerRequest);
 
 
 
